@@ -21,4 +21,205 @@ a {
 /* -------------------- Header -------------------- */
 header {
     text-align: center;
-    backgroun
+    background: linear-gradient(135deg, #ff77a9 0%, #ff3c78 100%);
+    color: white;
+    padding: 70px 20px;
+    box-shadow: 0 5px 20px rgba(255, 70, 150, 0.4);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 10px rgba(255, 150, 183, 0.9);
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-top: 6px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 6px solid white;
+    box-shadow: 0 4px 15px rgba(255, 115, 150, 0.6);
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 6px 20px rgba(255, 115, 150, 0.8);
+}
+
+/* -------------------- Navigation -------------------- */
+nav {
+    margin-top: 35px;
+}
+
+nav a {
+    color: white;
+    margin: 0 22px;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 8px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 8px transparent;
+    display: inline-block;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #ff218c;
+    box-shadow: 0 0 15px #ff218c, 0 0 25px #ff77a9;
+    transform: translateY(-3px);
+}
+
+/* -------------------- Section -------------------- */
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 50px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(255, 99, 148, 0.25);
+    border: 3px solid #ff77a9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 99, 148, 0.35);
+}
+
+/* -------------------- Headings -------------------- */
+h2 {
+    color: #d91e63;
+    border-bottom: 3px solid #ff77a9;
+    padding-bottom: 12px;
+    font-weight: 700;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 1px 5px rgba(255, 99, 148, 0.4);
+}
+
+/* -------------------- Project Cards -------------------- */
+.project {
+    background: #ffe6f0;
+    padding: 25px;
+    margin: 25px 0;
+    border-left: 7px solid #ff3c78;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(255, 60, 120, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 35px rgba(255, 60, 120, 0.45);
+}
+
+/* -------------------- Skills -------------------- */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    background: #ffd4e8;
+    margin: 12px 0;
+    padding: 18px 22px;
+    border-radius: 15px;
+    border-left: 8px solid #ff3c78;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 6px 15px rgba(255, 60, 120, 0.3);
+    transition: transform 0.2s ease;
+}
+
+#skills li:hover {
+    transform: translateX(5px);
+}
+
+/* -------------------- Form -------------------- */
+form input, form textarea {
+    width: 100%;
+    max-width: 520px;
+    margin: 14px 0;
+    padding: 15px;
+    border: 2px solid #ff77a9;
+    border-radius: 12px;
+    font-size: 17px;
+    box-sizing: border-box;
+    color: #4a033c;
+    background-color: #fff0f6;
+    box-shadow: inset 1px 1px 6px rgba(255, 115, 170, 0.45);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff218c;
+    outline: none;
+    box-shadow: 0 0 10px #ff218c;
+}
+
+form button {
+    background: #ff218c;
+    color: white;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    box-shadow: 0 6px 18px rgba(255, 33, 140, 0.75);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #e0007c;
+    box-shadow: 0 8px 25px rgba(224, 0, 124, 0.9);
+    transform: translateY(-2px);
+}
+
+#formResponse {
+    margin-top: 22px;
+    font-weight: 700;
+    color: #d6006a;
+    font-size: 1.15em;
+}
+
+/* -------------------- Media Queries -------------------- */
+@media (max-width: 768px) {
+    section {
+        margin: 30px 20px;
+        padding: 30px 25px;
+    }
+
+    nav a {
+        display: block;
+        margin: 12px 0;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2.4em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
