@@ -1,34 +1,47 @@
-// Smooth scrolling for navigation links
+// --- Smooth scrolling for navigation links ---
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if(target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
 });
 
-// Contact form handler
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+// --- Contact form handler ---
+const contactForm = document.getElementById('contactForm');
+const formResponse = document.getElementById('formResponse');
+
+contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
 
     if(name && email && message) {
-        document.getElementById('formResponse').textContent = `Thank you, ${name}! Your message has been sent.`;
-        this.reset();
+        formResponse.textContent = `Thank you, ${name}! Your message has been sent.`;
+        formResponse.style.color = '#00ffff'; // neon-cyan for success
+        contactForm.reset();
     } else {
-        document.getElementById('formResponse').textContent = 'Please fill in all fields.';
-        document.getElementById('formResponse').style.color = '#dc3545';
+        formResponse.textContent = 'Please fill in all fields.';
+        formResponse.style.color = '#dc3545'; // red for error
     }
 });
 
-// Add scroll effect to header
+// --- Smooth scroll effect for header on scroll ---
+const header = document.querySelector('header');
+
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
+    if(window.scrollY > 100) {
         header.style.transform = 'translateY(-10px)';
+        header.style.transition = 'transform 0.3s ease-in-out';
+        header.style.boxShadow = '0 4px 10px rgba(0,255,255,0.3)';
     } else {
         header.style.transform = 'translateY(0)';
+        header.style.transition = 'transform 0.3s ease-in-out';
+        header.style.boxShadow = 'none';
     }
 });
