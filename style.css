@@ -1,3 +1,4 @@
+/* -------------------- Global Styles -------------------- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -5,168 +6,19 @@ body {
     background-color: #fff0f6;
     color: #4a033c;
     line-height: 1.7;
+    scroll-behavior: smooth;
 }
 
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* -------------------- Header -------------------- */
 header {
     text-align: center;
-    background: linear-gradient(135deg, #ff77a9 0%, #ff3c78 100%);
-    color: white;
-    padding: 70px 20px;
-    box-shadow: 0 5px 15px rgba(255, 70, 150, 0.4);
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
-
-.profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    border: 6px solid white;
-    box-shadow: 0 4px 15px rgba(255, 115, 150, 0.6);
-    object-fit: cover;
-}
-
-header h1 {
-    margin: 0 0 12px;
-    font-size: 3em;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 8px rgba(255, 150, 183, 0.9);
-}
-
-header p {
-    margin: 6px 0;
-    opacity: 0.9;
-    font-weight: 600;
-    font-size: 1.2em;
-}
-
-nav {
-    margin-top: 35px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 22px;
-    font-weight: 700;
-    font-size: 1.2em;
-    padding: 5px 15px;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.15);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 8px transparent;
-}
-
-nav a:hover {
-    background-color: #ff218c;
-    box-shadow: 0 0 12px #ff218c;
-    opacity: 1;
-}
-
-section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 35px 40px;
-    background: white;
-    border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(255, 99, 148, 0.25);
-    border: 3px solid #ff77a9;
-}
-
-h2 {
-    color: #d91e63;
-    border-bottom: 3px solid #ff77a9;
-    padding-bottom: 12px;
-    font-weight: 700;
-    font-size: 2.4em;
-    text-transform: uppercase;
-    letter-spacing: 1.4px;
-}
-
-.project {
-    background: #ffe6f0;
-    padding: 25px 25px;
-    margin: 25px 0;
-    border-left: 7px solid #ff3c78;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(255, 60, 120, 0.3);
-}
-
-#skills ul {
-    list-style: none;
-    padding: 0;
-}
-
-#skills li {
-    background: #ffd4e8;
-    margin: 12px 0;
-    padding: 18px 22px;
-    border-radius: 15px;
-    border-left: 8px solid #ff3c78;
-    font-weight: 600;
-    font-size: 1.1em;
-    box-shadow: 0 4px 12px rgba(255, 60, 120, 0.25);
-}
-
-form input, form textarea {
-    width: 100%;
-    max-width: 520px;
-    margin: 14px 0;
-    padding: 15px;
-    border: 2px solid #ff77a9;
-    border-radius: 12px;
-    font-size: 17px;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #4a033c;
-    background-color: #fff0f6;
-    box-shadow: inset 1px 1px 6px rgba(255, 115, 170, 0.45);
-    transition: border 0.3s ease;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #ff218c;
-    outline: none;
-    box-shadow: 0 0 8px #ff218c;
-}
-
-form button {
-    background: #ff218c;
-    color: white;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1.1px;
-    box-shadow: 0 5px 15px rgba(255, 33, 140, 0.7);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-form button:hover {
-    background: #e0007c;
-    box-shadow: 0 6px 20px rgba(224, 0, 124, 0.85);
-}
-
-#formResponse {
-    margin-top: 22px;
-    font-weight: 700;
-    color: #d6006a;
-    font-size: 1.15em;
-}
-
-@media (max-width: 768px) {
-    section {
-        margin: 30px 20px;
-        padding: 25px 30px;
-    }
-
-    nav a {
-        display: block;
-        margin: 12px 0;
-        padding: 10px 0;
-    }
-}
+    backgroun
